@@ -62,7 +62,7 @@ class ReportingTests(unittest.TestCase):
         reply = self.bot.handle('254700000000', 'monthly last')
         self.assertIn('MONTHLY CONTRIBUTIONS - October 2026', reply)
         self.assertIn('Savings against expected: KES 500 / 3,500 (14%)', reply)
-        self.assertIn('*No savings payment:* Grace Wanjuri, John Kamau', reply)
+        self.assertIn('*No savings payment:* Grace Wanjiru, John Kamau', reply)
 
     @patch('chama_core.today', return_value=dt.date(2026, 11, 14))
     def test_group_statement_includes_member_status_and_forwarding_details(self, _today):
